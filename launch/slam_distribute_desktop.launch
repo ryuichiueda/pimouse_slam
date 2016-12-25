@@ -1,5 +1,5 @@
 <launch>
-  <node pkg="pimouse_ros" name="keyboard_cmd_vel" type="keyboard_cmd_vel.py" required="true" />
+  <node pkg="pimouse_slam" name="keyboard_cmd_vel" type="keyboard_cmd_vel.py" required="true" />
 
   <arg name="scan_topic" default="/scan" />
   <arg name="odom_topic" default="/odom" />

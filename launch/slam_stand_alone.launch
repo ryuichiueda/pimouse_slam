@@ -1,6 +1,6 @@
 <launch>
-  <node pkg="pimouse_ros" name="keyboard_cmd_vel" type="keyboard_cmd_vel.py" required="true" />
-  <node pkg="pimouse_ros" name="motors" type="motors.py" required="true" />
+  <node pkg="pimouse_slam" name="keyboard_cmd_vel" type="keyboard_cmd_vel.py" required="true" />
+  <node pkg="pimouse_slam" name="motors" type="motors.py" required="true" />
 
   <node pkg="urg_node" name="urg_node" type="urg_node" required="true" >
         <param name="frame_id" value="base_link"/>
