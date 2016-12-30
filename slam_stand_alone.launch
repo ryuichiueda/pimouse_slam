@@ -1,4 +1,0 @@
-<launch>
-  <node pkg="pimouse_ros" name="keyboard_cmd_vel" type="keyboard_cmd_vel.py" required="true" />
-  <node pkg="pimouse_ros" name="motors" type="motors.py" required="true" />
-</launch>

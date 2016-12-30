@@ -1,0 +1,28 @@
+<launch>
+  <node pkg="pimouse_ros" name="keyboard_cmd_vel" type="keyboard_cmd_vel.py" required="true" />
+  <node pkg="pimouse_ros" name="motors" type="motors.py" required="true" />
+
+  <node pkg="urg_node" name="urg_node" type="urg_node" required="true" >
+        <param name="frame_id" value="base_link"/>
+  </node>
+
+  <arg name="scan_topic" default="/scan" />
+  <arg name="odom_topic" default="/odom" />
+
+  <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen">
+    <param name="base_frame" value="base_link"/>
+    <param name="odom_frame" value="odom"/>
+
+    <param name="maxUrange" value="4.0"/>
+    <param name="maxRange" value="4.0"/>
+
+    <param name="srr" value="0.3"/>
+    <param name="srt" value="0.1"/>
+    <param name="str" value="0.1"/>
+    <param name="stt" value="0.3"/>
+
+    <param name="particles" value="100"/>
+
+    <!--<param name="minimumScore" value="100"/>-->
+  </node>
+</launch>
