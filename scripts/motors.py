@@ -42,6 +42,7 @@ class Motor():
         odom.header.frame_id = "odom"
 
         odom.pose.pose.position = Point(self.x,self.y,0)
+        #odom.pose.pose.orientation = Quaternion(*q)
         odom.pose.pose.orientation.x = q[0]
         odom.pose.pose.orientation.y = q[1]
         odom.pose.pose.orientation.z = q[2]
