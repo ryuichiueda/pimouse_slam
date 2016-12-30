@@ -32,7 +32,7 @@ class Motor():
         dt = self.cur_time.to_sec() - self.last_time.to_sec()
         self.x += self.vx * math.cos(self.th) * dt
         self.y += self.vx * math.sin(self.th) * dt
-        self.th = self.vth * dt 
+        self.th += self.vth * dt 
 
         q = tf.transformations.quaternion_from_euler(0, 0, self.th)
         self.bc_odom.sendTransform((self.x,self.y,0.0), q, self.cur_time,"base_link","odom")
@@ -42,11 +42,7 @@ class Motor():
         odom.header.frame_id = "odom"
 
         odom.pose.pose.position = Point(self.x,self.y,0)
-        #odom.pose.pose.orientation = Quaternion(*q)
-        odom.pose.pose.orientation.x = q[0]
-        odom.pose.pose.orientation.y = q[1]
-        odom.pose.pose.orientation.z = q[2]
-        odom.pose.pose.orientation.w = q[3]
+        odom.pose.pose.orientation = Quaternion(*q)
 
         odom.child_frame_id = "base_link"
         odom.twist.twist.linear.x = self.vx
