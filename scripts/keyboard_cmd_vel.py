@@ -1,4 +1,8 @@
 #!/usr/bin/env python
+#Copyright (c) 2016 RT Corp. <shop@rt-net.jp>
+#Copyright (c) 2016 Daisuke Sato <tiryoh@gmail.com>
+#Copyright (c) 2016 Ryuichi Ueda <ryuichiueda@gmail.com>
+
 import rospy
 from geometry_msgs.msg import Twist
 from std_srvs.srv import Trigger, TriggerResponse
