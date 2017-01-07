@@ -1,7 +1,11 @@
 #!/usr/bin/env python
+#keyboard_cmd_vel.py
 #Copyright (c) 2016 RT Corp. <shop@rt-net.jp>
 #Copyright (c) 2016 Daisuke Sato <tiryoh@gmail.com>
 #Copyright (c) 2016 Ryuichi Ueda <ryuichiueda@gmail.com>
+
+#This software is released under the MIT License.
+#http://opensource.org/licenses/mit-license.php
 
 import rospy
 from geometry_msgs.msg import Twist
