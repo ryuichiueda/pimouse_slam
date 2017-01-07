@@ -5,8 +5,8 @@ project(pimouse_slam)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
-  gmapping
-  pimouse_ros
+  rospy
+  std_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -101,7 +101,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES pimouse_slam
-#  CATKIN_DEPENDS gmapping pimouse_ros
+#  CATKIN_DEPENDS 
 #  DEPENDS system_lib
 )
 
